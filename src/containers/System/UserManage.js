@@ -3,12 +3,14 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './usersManage.scss';
 import { getAllUsers } from "../../services/userService"
+import ModalUser from './ModalUser';
 class UserManage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            arrUsers: []
+            arrUsers: [],
+            isOpenModalUser: false,
         }
     }
 
@@ -21,12 +23,35 @@ class UserManage extends Component {
             })
         }
     }
+    handleAddNewUser = () => {
+        this.setState({
+            isOpenModalUser: true,
+        })
+
+    }
+
+    toggeleUserModal = () => {
+        this.setState({
+            isOpenModalUser: !this.state.isOpenModalUser
+        })
+    }
+
     render() {
         console.log('check render :', this.state);
         let arrUsers = this.state.arrUsers;
         return (
             <div className="users-container">
+                <ModalUser
+                    isOpen={this.state.isOpenModalUser}
+                    toggleFromParent={this.toggeleUserModal}
+                    test={'ababab'}
+
+                />
                 <div className='title text-center'>Manage users with Bao Ngoc</div>
+                <div className='mx-1'>
+                    <button className='btn btn-primary px-2'
+                        onClick={() => this.handleAddNewUser()}> <i className='fas fa-plus'></i> Add new user</button>
+                </div>
                 <div className='users-table mt-4 mx-3'>
                     <table id="customers">
                         <tr>
@@ -48,7 +73,6 @@ class UserManage extends Component {
                                     <td>
                                         <button className='btn-edit'><i className='fas fa-pencil-alt'></i></button>
                                         <button className='btn-delete'><i className='fas fa-trash'></i></button>
-
                                     </td>
                                 </tr>
                             )
