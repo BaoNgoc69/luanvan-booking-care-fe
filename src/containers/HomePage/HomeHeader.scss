@@ -11,7 +11,6 @@
         .left-content {
             display: flex;
             width: 25%;
-            border: 1px solid red;
             align-items: center;
 
             .headerLogo {
@@ -23,7 +22,6 @@
 
             i {
                 font-size: 20px;
-                color: gray;
                 margin-right: 10px;
                 cursor: pointer;
             }
@@ -32,7 +30,6 @@
 
         .center-content {
             width: 50%;
-            border: 1px solid yellow;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,7 +42,6 @@
 
         .right-content {
             width: 25%;
-            border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,5 +49,118 @@
 
 
     }
+
+}
+
+.home-header-banner {
+    background: url(../../assets/images/header-background.jpg);
+    height: 485px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    .content-up {
+        border: 1px solid red;
+        height: 50%;
+
+        .title1 {
+            text-align: center;
+            font-size: 25px;
+            text-shadow: 1px 1px 1px #333;
+            margin: 15px 0;
+            color: white;
+            padding-top: 10px;
+        }
+
+        .title2 {
+            text-align: center;
+            font-size: 25px;
+            text-shadow: 1px 1px 1px #333;
+            margin-bottom: 15px;
+            color: white;
+            font-weight: 700;
+
+        }
+
+        .search {
+            margin-top: 5px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            align-items: center;
+            padding: 10px;
+            width: fit-content;
+            border-radius: 25px;
+            background-color: #f1c40f;
+            margin-top: 62px;
+
+            i {
+                margin: 0 5px;
+            }
+
+            input {
+                height: 30px;
+                width: 360px;
+                background: transparent;
+                border: none;
+                outline: none;
+
+            }
+        }
+    }
+
+    .content-down {
+        border: 1px solid green;
+        height: 50%;
+
+
+        .option {
+
+            text-align: center;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+
+            .option-child {
+                border: 1px solid black;
+                width: 125px;
+
+
+                .icon-child {
+                    background: #fff;
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    i {
+                        font-size: 30px;
+                        color: #1abc9c;
+                    }
+                }
+            }
+
+            .text-child {
+                font-weight: 500;
+                font-size: 17px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #3498db;
+
+                }
+            }
+
+
+        }
+    }
+
+
+
 
 }
