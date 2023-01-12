@@ -1,5 +1,5 @@
 .home-header-container {
-    height: 60px;
+    height: 70px;
     width: 100%;
 
     .home-header-content {
@@ -10,14 +10,15 @@
 
         .left-content {
             display: flex;
-            width: 25%;
+            width: 10%;
             align-items: center;
 
             .headerLogo {
                 height: 100%;
                 width: 100%;
-                background: url('../../assets/images/Logo.svg') center no-repeat;
+                background: url('../../assets/images/logo-phong-kham-17.jpg') center no-repeat;
                 cursor: pointer;
+                background-size: contain;
             }
 
             i {
@@ -29,10 +30,11 @@
 
 
         .center-content {
-            width: 50%;
+            width: 65%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-left: 70px;
 
             .sub-title {
                 font-size: 12px;
@@ -43,8 +45,38 @@
         .right-content {
             width: 25%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
+
+            .support {
+                padding-right: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                i {
+                    font-size: 15px;
+                    margin-right: 5px;
+
+                }
+
+                .language-vi {
+                    cursor: pointer;
+                    color: #3498db;
+
+                    &.active {
+                        color: orange;
+                    }
+                }
+
+                .language-en {
+                    cursor: pointer;
+
+                    &.active {
+                        color: blue;
+                    }
+                }
+            }
         }
 
 
@@ -61,9 +93,12 @@
     display: flex;
     flex-direction: column;
 
+
     .content-up {
-        border: 1px solid red;
-        height: 50%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.1));
+
+        height: 65%;
+
 
         .title1 {
             text-align: center;
@@ -113,8 +148,11 @@
     }
 
     .content-down {
-        border: 1px solid green;
-        height: 50%;
+        height: 35%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
 
 
         .option {
@@ -125,8 +163,7 @@
             justify-content: center;
 
             .option-child {
-                border: 1px solid black;
-                width: 125px;
+                width: 90px;
 
 
                 .icon-child {
