@@ -10,6 +10,16 @@
         "check-health": "General health check",
         "support": "Support"
     },
+    "banner": {
+        "title-1": "MEDICAL BACKGROUND",
+        "title-2": "HEALTH CARE OF EVERY HOUSE",
+        "child1": "Specialized examination",
+        "child2": "Online examination",
+        "child3": "General examination",
+        "child4": "Medical test",
+        "child5": "Mental health",
+        "child6": "Dental examination"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

@@ -11,8 +11,14 @@
         "support": "Hỗ trợ"
     },
     "banner": {
-        "title1": " NỀN TẢNG Y TẾ",
-        "title2": " CHĂM SÓC SỨC KHỎE CỦA MỌI NHÀ"
+        "title-1": " NỀN TẢNG Y TẾ",
+        "title-2": " CHĂM SÓC SỨC KHỎE CỦA MỌI NHÀ",
+        "child1": "Khám chuyên khoa",
+        "child2": "Khám trực tuyến",
+        "child3": "Khám tổng quát",
+        "child4": "Xét nghiệm y học",
+        "child5": "Sức khỏe tinh thần",
+        "child6": " Khám nha khoa"
     },
     "common": {
         "add": "Thêm",
