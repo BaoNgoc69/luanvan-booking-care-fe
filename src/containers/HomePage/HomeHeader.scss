@@ -57,24 +57,37 @@
                 i {
                     font-size: 15px;
                     margin-right: 5px;
-
                 }
+            }
 
-                .language-vi {
-                    cursor: pointer;
-                    color: #3498db;
+            .language-vi {
+                cursor: pointer;
+                margin: 0 8px;
+                opacity: 0.3;
 
-                    &.active {
-                        color: orange;
+                &.active {
+                    opacity: 1;
+
+                    span {
+                        color: red;
                     }
+
                 }
 
-                .language-en {
-                    cursor: pointer;
 
-                    &.active {
+
+            }
+
+            .language-en {
+                cursor: pointer;
+                opacity: 0.3;
+
+                &.active {
+                    span {
                         color: blue;
                     }
+
+                    opacity: 1;
                 }
             }
         }
