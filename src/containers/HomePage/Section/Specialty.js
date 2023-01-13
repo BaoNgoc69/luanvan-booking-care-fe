@@ -6,7 +6,7 @@ import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import specialtyImg from "../../../assets/specialty/181619-sieu-am-thai.jpg";
 
 class Specialty extends Component {
 
@@ -16,34 +16,48 @@ class Specialty extends Component {
             infinite: true,
             speed: 500,
             slidesToShow: 4,
-            slidesToScroll: 1,
-            // nextArrow: <SampleNextArrow />,
-            // prevArrow: <SamplePrevArrow />
+            slidesToScroll: 1
+
         };
         return (
             <div className='section-specialty'>
                 <div className='specialty-content'>
-                    <Slider {...settings}>
-                        <div className='img-customize'>
-                            <h3>1</h3>
-                        </div>
-                        <div className='img-customize'>
-                            <h3>2</h3>
-                        </div>
-                        <div className='img-customize'>
-                            <h3>3</h3>
-                        </div>
-                        <div className='img-customize'>
-                            <h3>4</h3>
-                        </div>
-                        <div className='img-customize'>
-                            <h3>5</h3>
-                        </div>
-                        <div className='img-customize'>
-                            <h3>6</h3>
-                        </div>
+                    <div className='specialty-header'>
+                        <span className='title-section'>Chuyên khoa nổi bật</span>
+                        <button className='btn-section'>Xem thêm</button>
+                    </div>
+                    <div className='specialty-body'>
+                        <Slider {...settings}>
 
-                    </Slider>
+                            <div className='specialty-customize'>
+                                <div className='bg-image' />
+                                <div>Siêu âm thai 1</div>
+                            </div>
+                            <div className='specialty-customize'>
+                                <div className='bg-image' />
+                                <div>Siêu âm thai 2</div>
+                            </div>
+
+                            <div className='specialty-customize'>
+                                <div className='bg-image' />
+                                <div>Siêu âm thai 3</div>
+                            </div>
+                            <div className='specialty-customize'>
+                                <div className='bg-image' />
+                                <div>Siêu âm thai 4</div>
+                            </div>
+                            <div className='specialty-customize'>
+                                <div className='bg-image' />
+                                <div>Siêu âm thai 5</div>
+                            </div>
+                            <div className='specialty-customize'>
+                                <div className='bg-image' />
+                                <div>Siêu âm thai 6</div>
+                            </div>
+
+                        </Slider>
+                    </div>
+
                 </div>
             </div>
         );
