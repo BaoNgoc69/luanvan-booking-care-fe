@@ -13,6 +13,7 @@ import Header from './Header/Header';
 import System from '../routes/System';
 import { CustomToastCloseButton } from '../components/CustomToast';
 import HomePage from './HomePage/HomePage';
+import CustomScrollbars from '../components/CustomScrollbars';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -41,15 +42,17 @@ class App extends Component {
 
                         {this.props.isLoggedIn && <Header />}
 
-                        <span className="content-container">
-                            <Switch>
-                                <Route path={path.HOME} exact component={(Home)} />
-                                <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                                <Route path={path.HOMEPAGE} component={HomePage} />
+                        <div className="content-container">
+                            <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
+                                <Switch>
+                                    <Route path={path.HOME} exact component={(Home)} />
+                                    <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
+                                    <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                    <Route path={path.HOMEPAGE} component={HomePage} />
 
-                            </Switch>
-                        </span>
+                                </Switch>
+                            </CustomScrollbars>
+                        </div>
 
                         <ToastContainer
                             className="toast-container" toastClassName="toast-item" bodyClassName="toast-item-body"
@@ -59,7 +62,7 @@ class App extends Component {
                         />
                     </div>
                 </Router>
-            </Fragment>
+            </Fragment >
         )
     }
 }
