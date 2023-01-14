@@ -1,47 +1,45 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Specialty.scss';
 import { FormattedMessage } from 'react-intl';
 import Slider from "react-slick";
-import sectionImg from "../../../assets/specialties/181619-sieu-am-thai.jpg";
 
-class Specialty extends Component {
+class Handbook extends Component {
 
     render() {
 
         return (
-            <div className='section-share section-specialty'>
+            <div className='section-share section-handbook'>
                 <div className='section-content'>
                     <div className='section-header'>
-                        <span className='title-section'>Chuyên khoa nổi bật</span>
+                        <span className='title-section'>Cẩm nang</span>
                         <button className='btn-section'>Xem thêm</button>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
 
                             <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
+                                <div className='bg-image section-handbook' />
                                 <div>Siêu âm thai 1</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
+                                <div className='bg-image section-handbook' />
                                 <div>Siêu âm thai 2</div>
                             </div>
 
                             <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
+                                <div className='bg-image section-handbook' />
                                 <div>Siêu âm thai 3</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
+                                <div className='bg-image section-handbook' />
                                 <div>Siêu âm thai 4</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
+                                <div className='bg-image section-handbook' />
                                 <div>Siêu âm thai 5</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
+                                <div className='bg-image section-handbook' />
                                 <div>Siêu âm thai 6</div>
                             </div>
 
@@ -68,4 +66,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(Handbook);

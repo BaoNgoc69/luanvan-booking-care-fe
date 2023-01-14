@@ -3,12 +3,12 @@
     background-color: #f5f5f5;
 
 
-    .specialty-content {
+    .section-content {
         margin: 0 70px;
         display: flex;
         flex-direction: column;
 
-        .specialty-header {
+        .section-header {
             height: 60px;
             margin-bottom: 30px;
             padding-top: 30px;
@@ -37,15 +37,15 @@
 
         }
 
-        .specialty-body {
+        .section-body {
 
             // reset slick slider css
 
-            .specialty-customize {
+            .section-customize {
                 .bg-image {
                     width: 278px;
                     height: 150px;
-                    background: url('../../../assets/specialty/181619-sieu-am-thai.jpg');
+                    background: url('../../../assets/specialties/181619-sieu-am-thai.jpg');
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -79,7 +79,7 @@
 
 .slick-next::before,
 .slick-prev::before {
-    font-family: FontAwesome !important;
+    font-family: 'FontAwesome' !important;
     color: red !important;
 
 }
