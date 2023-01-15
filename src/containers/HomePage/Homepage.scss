@@ -7,6 +7,14 @@
         background-color: rgb(232, 234, 224);
     }
 
+    &.section-about {
+        height: 450px !important;
+        border-top: 1px solid orange;
+        border-bottom: 1px solid orange;
+    }
+
+
+
 
     .section-body {
         .section-customize {
@@ -15,7 +23,7 @@
                 height: 150px;
                 background: url('../../assets/specialties/181619-sieu-am-thai.jpg');
                 background-position: center center;
-                background-repeat: no-repeat;
+                background-repeat: no-repeat !important;
                 background-size: cover;
                 background-color: #eee;
 
@@ -34,6 +42,8 @@
                     width: 120px;
                     height: 120px;
                     border-radius: 50%;
+                    margin-left: 54px;
+
 
                 }
 
@@ -41,6 +51,8 @@
                     background-image: url('../../assets/handbook/180844-phong-kham-tim-mach-bac-si-pham-xuan-hau.png');
 
                 }
+
+
 
 
 
@@ -99,11 +111,11 @@
 }
 
 .section-doctor {
-    .outer-bg {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
+    // .outer-bg {
+    //     display: flex;
+    //     // justify-content: center;
+    //     margin-bottom: 10px;
+    // }
 
     .section-customize {
         padding: 5px;
@@ -114,5 +126,43 @@
     .customize-border {
         border: 1px solid orange;
         padding: 20px;
+    }
+}
+
+.home-footer {
+    text-align: center;
+    padding-top: 8px;
+
+}
+
+.section-about {
+    margin: 0 100px;
+
+    .section-about-header {
+        // padding: 20px 10px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .section-about-content {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+
+        .content-left {
+            width: 60%;
+        }
+
+        .content-right {
+            width: 40%;
+
+            p {
+                font-size: 13px;
+                font-weight: normal;
+                text-align: justify;
+                padding-top: 15px;
+                font-style: italic;
+            }
+        }
     }
 }

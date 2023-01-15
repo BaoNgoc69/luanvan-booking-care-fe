@@ -32,6 +32,7 @@ class Doctor extends Component {
                                     <div className='outer-bg'>
                                         <div className='bg-image section-doctor' />
                                         <div className='position text-center'>
+
                                             <div>Gs, Ts Ngọc</div>
                                             <div>Xương Khớp</div>
                                         </div>
