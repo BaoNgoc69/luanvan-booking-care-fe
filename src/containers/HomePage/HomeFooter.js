@@ -7,7 +7,7 @@ class HomeFooter extends Component {
     render() {
 
         return (
-            <div className='section-share home-footer'>
+            <div className=' home-footer'>
                 <div>
                     <p>&copy; 2023 Phan Thị Bảo Ngọc - Luận Văn Tốt Nghiệp. </p>
                 </div>
