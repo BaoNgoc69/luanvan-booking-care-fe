@@ -24,4 +24,37 @@ export const adminMenu = [
 
         ]
     },
+    { //quản lý phòng khám
+        name: 'menu.admin.clinic',
+        menus: [
+            {
+                name: 'menu.admin.manage-clinic', link: '/system/manage-clinic',
+
+            },
+
+
+        ]
+    },
+    { //quản lý chuyên khoa
+        name: 'menu.admin.specialty',
+        menus: [
+            {
+                name: 'menu.admin.manage-specialty', link: '/system/manage-specialty',
+
+            },
+
+
+        ]
+    },
+    { //quản lý cẩm nan
+        name: 'menu.admin.handbook',
+        menus: [
+            {
+                name: 'menu.admin.manage-handbook', link: '/system/manage-handbook',
+
+            },
+
+
+        ]
+    },
 ];
