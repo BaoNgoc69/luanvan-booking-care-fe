@@ -31,5 +31,7 @@ const getAllCodeService = (inputType) => {
 
 export {
     handleLoginApi, getAllUsers,
-    createNewUserService, deleteUserService, editUserService, getAllCodeService
+    createNewUserService,
+    deleteUserService, editUserService,
+    getAllCodeService
 };
