@@ -32,14 +32,18 @@ class Doctor extends Component {
     render() {
         let arrDoctors = this.state.arrDoctors;
         let { language } = this.props;
-        arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors).concat(arrDoctors).concat(arrDoctors).concat(arrDoctors)
+        // arrDoctors = arrDoctors.concat(arrDoctors)
         console.log('===============', arrDoctors)
         return (
             <div className='section-share section-doctor'>
                 <div className='section-content'>
                     <div className='section-header'>
-                        <span className='title-section'>Bác sĩ nổi bật tuần qua</span>
-                        <button className='btn-section'>Xem thêm</button>
+                        <span className='title-section'>
+                            <FormattedMessage id="homepage.outstading-doctor" />
+                        </span>
+                        <button className='btn-section'>
+                            <FormattedMessage id="homepage.more-infor" />
+                        </button>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>

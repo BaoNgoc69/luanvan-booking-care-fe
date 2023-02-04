@@ -12,7 +12,7 @@
         "welcome": "welcome, "
     },
     "banner": {
-        "title-1": "MEDICAL BACKGROUND",
+        "title-1": "MEDICAL PLATFORM",
         "title-2": "HEALTH CARE OF EVERY HOUSE",
         "child1": "Specialized examination",
         "child2": "Online examination",
@@ -50,5 +50,9 @@
         "image": "Image",
         "save": "Save",
         "edit": "Edit user"
+    },
+    "homepage": {
+        "outstading-doctor": "Featured doctor of the week",
+        "more-infor": "More-infor"
     }
 }
