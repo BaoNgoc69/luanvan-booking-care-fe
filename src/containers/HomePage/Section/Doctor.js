@@ -4,10 +4,9 @@ import Slider from "react-slick";
 import { FormattedMessage } from 'react-intl';
 import * as actions from '../../../store/actions';
 import { LANGUAGES } from '../../../utils';
-
+import { withRouter } from 'react-router';
 
 class Doctor extends Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -27,6 +26,14 @@ class Doctor extends Component {
         this.props.loadTopDoctors();
 
 
+    }
+
+    handleViewDetialDoctor = (doctor) => {
+        console.log('Check view infor: ', doctor)
+        if (this.props.history) {
+            this.props.history.push(`/detail-doctor/${doctor.id}`)
+
+        }
     }
 
     render() {
@@ -59,7 +66,9 @@ class Doctor extends Component {
                                     let nameEn = `${item.positionData.valueEn}, ${item.firstName}  ${item.lastName}`
 
                                     return (
-                                        <div className='section-customize' key={index}>
+                                        <div className='section-customize' key={index}
+                                            onClick={() => this.handleViewDetialDoctor(item)}
+                                        >
                                             <div className='customize-border'>
                                                 <div className='outer-bg'>
                                                     <div className='bg-image section-doctor'
@@ -101,4 +110,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Doctor);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Doctor));
