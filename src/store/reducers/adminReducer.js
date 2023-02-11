@@ -14,7 +14,8 @@ const initialState = {
     // isLoadingGender: false
     users: [],
     topDoctors: [],
-    allDoctors: []
+    allDoctors: [],
+    allScheduleTime: []
 }
 
 
@@ -101,6 +102,18 @@ const adminReducer = (state = initialState, action) => {
 
             }
         case actionTypes.FETCH_ALL_DOCTORS_FAILDED:
+            state.allDoctors = [];
+            return {
+                ...state,
+
+            }
+        case actionTypes.FETCH_ALLCODE_SCHEDULE_TIMES_SUCCESS:
+            state.allScheduleTime = action.dataTime;
+            return {
+                ...state,
+
+            }
+        case actionTypes.FETCH_ALLCODE_SCHEDULE_TIMES_FAILDED:
             state.allDoctors = [];
             return {
                 ...state,
