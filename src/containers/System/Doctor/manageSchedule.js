@@ -16,6 +16,7 @@ class manageSchedule extends Component {
             listDoctors: [],
             selectedDoctor: {},
             currentDate: '',
+            rangeTime: []
 
         }
     }
@@ -32,6 +33,13 @@ class manageSchedule extends Component {
                 listDoctors: dataSelect
             })
         }
+
+        if (prevProps.allScheduleTime !== this.props.allScheduleTime) {
+            this.setState({
+                rangeTime: this.props.allScheduleTime
+            })
+        }
+
         // if (prevProps.language !== this.props.language) {
         //     let dataSelect = this.buildDataInputSelect(this.props.allDoctors)
         //     this.setState({
@@ -70,8 +78,9 @@ class manageSchedule extends Component {
     }
     render() {
         console.log('bn check state: ', this.state);
-        console.log('bn check props: ', this.props);
-
+        // console.log('bn check props: ', this.props);
+        let { rangeTime } = this.state;
+        let { language } = this.props;
         return (
             <div className='manage-schedule-container'>
                 <div className='m-s-title'>
@@ -80,7 +89,7 @@ class manageSchedule extends Component {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-6 form-group'>
-                            <label>Chọn bác sĩ</label>
+                            <label> <FormattedMessage id="manage-schedule.choose-doctor" /> </label>
                             <Select
                                 value={this.state.selectedDoctor}
                                 onChange={this.handleChangeSelect}
@@ -88,7 +97,7 @@ class manageSchedule extends Component {
                             />
                         </div>
                         <div className='col-6 form-group'>
-                            <label>Chọn ngày</label>
+                            <label> <FormattedMessage id="manage-schedule.choose-date" /> </label>
                             <DatePicker
                                 onChange={this.hanldeOnchangeDatePicker}
                                 className="form-control"
@@ -98,11 +107,19 @@ class manageSchedule extends Component {
                             />
                         </div>
                         <div className='col-12 pick-hour-container'>
+                            {rangeTime && rangeTime.length > 0 && rangeTime.map((item, index) => {
+                                return (
+                                    <button className="btn btn-schedule" key={index}>
+
+                                        {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
+                                    </button>
+                                )
+                            })}
                         </div>
-                        <button className='btn btn-primary'>Lưu thông tin</button>
+                        <div className='col-12'>
+                            <button className='btn btn-primary btn-save-schedule'><FormattedMessage id="manage-schedule.save" /></button>
 
-
-
+                        </div>
                     </div>
 
                 </div>
