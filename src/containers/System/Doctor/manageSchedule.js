@@ -9,6 +9,7 @@ import DatePicker from '../../../components/Input/DatePicker';
 import moment from 'moment';
 import { toast } from 'react-toastify';
 import _ from 'lodash';
+import { saveBulkScheduleDoctor } from "../../../services/userService"
 class manageSchedule extends Component {
     constructor(props) {
         super(props);
@@ -98,7 +99,7 @@ class manageSchedule extends Component {
         }
     }
 
-    handleSaveSchedule = () => {
+    handleSaveSchedule = async () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state;
         let result = [];
         if (!currentDate) {
@@ -109,7 +110,10 @@ class manageSchedule extends Component {
             toast.error("Invalid selected doctor!");
             return;
         }
-        let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        //let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        // = moment(currentDate).unix();
+        let formatedDate = new Date(currentDate).getTime();
+
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected === true);
             if (selectedTime && selectedTime.length > 0) {
@@ -117,7 +121,7 @@ class manageSchedule extends Component {
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = formatedDate;
-                    object.time = schedule.keyMap;
+                    object.timeType = schedule.keyMap;
                     result.push(object)
 
 
@@ -128,6 +132,13 @@ class manageSchedule extends Component {
                 return;
             }
         }
+        let res = await saveBulkScheduleDoctor({
+            arrSchedule: result,
+            doctorId: selectedDoctor.value,
+            formatedDate: formatedDate
+        })
+        console.log('hoidanit check result saveBulkScheduleDoctor: ', res)
+
         console.log('hoidanit check result: ', result)
     }
     render() {
