@@ -137,14 +137,19 @@ class manageSchedule extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         })
-        console.log('hoidanit check result saveBulkScheduleDoctor: ', res)
-
-        console.log('hoidanit check result: ', result)
+        if (res && res.errCode === 0) {
+            toast.success("Save info success!");
+        }
+        else {
+            toast.error("error saveBulkScheduleDoctor!");
+            console.log('saveBulkScheduleDoctor res', res)
+        }
     }
     render() {
         // console.log('bn check props: ', this.props);
         let { rangeTime } = this.state;
         let { language } = this.props;
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         console.log('========== check state: ', rangeTime)
 
         return (
@@ -168,7 +173,7 @@ class manageSchedule extends Component {
                                 onChange={this.hanldeOnchangeDatePicker}
                                 className="form-control"
                                 value={this.state.currentDate}
-                                minDate={new Date()}
+                                minDate={yesterday}
 
                             />
                         </div>

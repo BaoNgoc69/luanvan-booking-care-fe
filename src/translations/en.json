@@ -63,5 +63,13 @@
         "choose-doctor": "Choose doctor",
         "choose-date": "Choose date",
         "save": "Save info"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "No-schedule",
+            "choose": "Choose",
+            "book-free": "and book (free)"
+        }
     }
 }
