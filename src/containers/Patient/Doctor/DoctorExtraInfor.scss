@@ -19,9 +19,12 @@
         }
     }.content-down{
         .short-info{
-            span{
+            .detail{
                 cursor: pointer;
                 color: rgb(97, 139, 217);
+            }
+            .currentcy{
+                margin: 0 5px;
             }
         }
         .title-price{

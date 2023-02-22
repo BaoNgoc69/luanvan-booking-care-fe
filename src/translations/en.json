@@ -70,6 +70,13 @@
             "no-schedule": "No-schedule",
             "choose": "Choose",
             "book-free": "and book (free)"
+        },
+        "extra-infor-doctor": {
+            "text-address": "Address of examination",
+            "price": "Price of medical examination",
+            "detail": "See details",
+            "payment": "The patient can pay the cost in the form of: ",
+            "hide-price": "Hide price list"
         }
     },
     "admin": {
