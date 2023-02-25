@@ -50,7 +50,7 @@ class DoctorSchedule extends Component {
                 }
                 else {
                     let labelVi = moment(new Date()).add(i, 'days').format('dddd - DD/MM');
-
+                    object.label = this.capitalizeFirstLetter(labelVi)
 
                 }
 
