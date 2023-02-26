@@ -77,6 +77,18 @@
             "detail": "See details",
             "payment": "The patient can pay the cost in the form of: ",
             "hide-price": "Hide price list"
+        },
+        "booking-modal": {
+            "title": "Information scheduling medical examination",
+            "fullName": "First and last name",
+            "phoneNumber": "PhoneNumber",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason for medical examination",
+            "birthday": "Date of birth",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
         }
     },
     "admin": {
