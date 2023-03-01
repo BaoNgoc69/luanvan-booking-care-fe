@@ -102,9 +102,6 @@ class UserRedux extends Component {
             })
 
         }
-
-
-
     }
 
     openPreviewImage = () => {
