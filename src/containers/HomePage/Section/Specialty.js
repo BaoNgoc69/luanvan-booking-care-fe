@@ -3,47 +3,68 @@ import { connect } from 'react-redux';
 import './Specialty.scss';
 import { FormattedMessage } from 'react-intl';
 import Slider from "react-slick";
-import sectionImg from "../../../assets/specialties/181619-sieu-am-thai.jpg";
+import { getAllSpecialty } from '../../../services/userService'
 
 class Specialty extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            dataSpecialty: []
+        }
+    }
+
+
+    async componentDidMount() {
+        let res = await getAllSpecialty();
+        console.log("check res=====: ", res)
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataSpecialty: res.data ? res.data : []
+
+            })
+        }
+
+
+    }
 
     render() {
+        let { dataSpecialty } = this.state;
 
         return (
             <div className='section-share section-specialty'>
                 <div className='section-content'>
                     <div className='section-header'>
-                        <span className='title-section'>Chuyên khoa nổi bật</span>
-                        <button className='btn-section'>Xem thêm</button>
+                        <span className='title-section'>
+                            <FormattedMessage id={"homepage.speciality"} />
+
+
+                        </span>
+                        <button className='btn-section'>
+
+                            <FormattedMessage id={"homepage.more-infor"} />
+                        </button>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
+                            {dataSpecialty && dataSpecialty.length > 0 &&
+                                dataSpecialty.map((item, index) => {
+                                    return (
+                                        <div className='section-customize specialty-child' key={index}>
+                                            <div className='bg-image section-specicalty'
 
-                            <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
-                                <div>Siêu âm thai 1</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
-                                <div>Siêu âm thai 2</div>
-                            </div>
+                                                style={{ backgroundImage: `url(${item.image})` }}
 
-                            <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
-                                <div>Siêu âm thai 3</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
-                                <div>Siêu âm thai 4</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
-                                <div>Siêu âm thai 5</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-specicalty' />
-                                <div>Siêu âm thai 6</div>
-                            </div>
+                                            />
+                                            <div className='specialty-name'>{item.name}</div>
+                                        </div>
+                                    )
+                                })
+                            }
+
+
+
+
+
 
                         </Slider>
                     </div>
