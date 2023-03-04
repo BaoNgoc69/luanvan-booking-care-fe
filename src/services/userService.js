@@ -92,6 +92,11 @@ const getDetailSpecialtyById = (data) => {
 
 }
 
+
+const createClinic = (data) => {
+    return axios.post('/api/create-new-clinic', data)
+}
+
 export {
     handleLoginApi, getAllUsers,
     createNewUserService,
@@ -102,6 +107,7 @@ export {
     getScheduleDoctorByDate, getExtraInforDoctorById,
     getProfileDoctorById,
     postPatientBookApoinment, postVerifyBookApoinment,
-    createSpecialty, getAllSpecialty, getDetailSpecialtyById
+    createSpecialty, getAllSpecialty, getDetailSpecialtyById,
+    createClinic
 
 };
