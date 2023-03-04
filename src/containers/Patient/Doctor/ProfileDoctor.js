@@ -7,6 +7,7 @@ import NumberFormat from 'react-number-format';
 import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 class ProfileDoctor extends Component {
     constructor(props) {
@@ -70,7 +71,11 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state;
-        let { language, isShowDescriptionDoctor, dataTime } = this.props;
+        let { language, isShowDescriptionDoctor, dataTime,
+            isShowPrice, isShowLinkDetail,
+            doctorId
+        } = this.props;
+
         let nameVi = '', nameEn = '';
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.lastName} ${dataProfile.firstName}`;
@@ -118,33 +123,45 @@ class ProfileDoctor extends Component {
 
                 </div>
 
-                <div className='price'>
-                    Giá khám:
-                    {dataProfile && dataProfile.Doctor_info && language === LANGUAGES.VI &&
-                        < NumberFormat
-                            className='currentcy'
-                            value={dataProfile.Doctor_info.priceTypeData.valueVi
-                            }
-                            displayType={'text'}
-                            thousandSeparator={true}
-                            suffix={'VND'}
-                        />
 
 
-                    }
-                    {dataProfile && dataProfile.Doctor_info && language === LANGUAGES.EN &&
-                        < NumberFormat
-                            className='currentcy'
-                            value={dataProfile.Doctor_info.priceTypeData.valueEn}
-                            displayType={'text'}
-                            thousandSeparator={true}
-                            suffix={'$'}
-                        />
+                {isShowLinkDetail === true && <div className='view-detail-doctor'>
+                    <Link to={`/detail-doctor/${doctorId}`}>Xem thêm</Link>
 
-
-                    }
 
                 </div>
+
+                }
+                {isShowPrice === true &&
+                    <div className='price'>
+                        Giá khám:
+                        {dataProfile && dataProfile.Doctor_info && language === LANGUAGES.VI &&
+                            < NumberFormat
+                                className='currentcy'
+                                value={dataProfile.Doctor_info.priceTypeData.valueVi
+                                }
+                                displayType={'text'}
+                                thousandSeparator={true}
+                                suffix={'VND'}
+                            />
+
+
+                        }
+                        {dataProfile && dataProfile.Doctor_info && language === LANGUAGES.EN &&
+                            < NumberFormat
+                                className='currentcy'
+                                value={dataProfile.Doctor_info.priceTypeData.valueEn}
+                                displayType={'text'}
+                                thousandSeparator={true}
+                                suffix={'$'}
+                            />
+
+
+                        }
+
+                    </div>
+                }
+
 
             </div>
 
