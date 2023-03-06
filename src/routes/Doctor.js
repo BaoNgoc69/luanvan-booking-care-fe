@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Header from '../containers/Header/Header';
 import manageSchedule from '../containers/System/Doctor/manageSchedule';
+
+import managePatient from '../containers/System/Doctor/ManagePatient';
 class Doctor extends Component {
     render() {
         const { isLoggedIn } = this.props;
@@ -14,6 +16,7 @@ class Doctor extends Component {
                     <div className="system-list">
                         <Switch>
                             <Route path="/doctor/manage-schedule" component={manageSchedule} />
+                            <Route path="/doctor/manage-patient" component={managePatient} />
 
                         </Switch>
                     </div>
