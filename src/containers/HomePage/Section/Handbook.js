@@ -19,28 +19,28 @@ class Handbook extends Component {
 
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Siêu âm thai 1</div>
+                                <div>Cẩm nan 1</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Siêu âm thai 2</div>
+                                <div>Cẩm nan 2</div>
                             </div>
 
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Siêu âm thai 3</div>
+                                <div>Cẩm nan 3</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Siêu âm thai 4</div>
+                                <div>Cẩm nan 4</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Siêu âm thai 5</div>
+                                <div>Cẩm nan 5</div>
                             </div>
                             <div className='section-customize'>
                                 <div className='bg-image section-handbook' />
-                                <div>Siêu âm thai 6</div>
+                                <div>Cẩm nan 6</div>
                             </div>
 
                         </Slider>
