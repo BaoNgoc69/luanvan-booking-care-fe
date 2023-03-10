@@ -26,9 +26,6 @@ class ManagePatient extends Component {
     async componentDidMount() {
 
         this.getDataPatient()
-
-
-
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
@@ -58,6 +55,8 @@ class ManagePatient extends Component {
             doctorId: user.id,
             date: formatedDate
         })
+        console.log('>>>>>>>>>>>>>>>>>> ', res);
+
         if (res && res.errCode === 0) {
             this.setState({
                 dataPatient: res.data
@@ -131,6 +130,8 @@ class ManagePatient extends Component {
     render() {
         let { dataPatient, isOpenRemedyModal, dataModal } = this.state;
         let language = this.props;
+
+        console.log('check props: ', this.props)
 
 
         return (
