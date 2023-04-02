@@ -1,110 +1,182 @@
 .section-specialty {
-    height: 330px;
-    background-color: #f5f5f5;
+  // height: 330px;
+  min-height: 360px;
+  background-color: #f5f5f5;
 
+  .section-content {
+    margin: 0 70px;
+    display: flex;
+    flex-direction: column;
 
-    .section-content {
-        margin: 0 70px;
-        display: flex;
-        flex-direction: column;
+    .section-header {
+      height: 60px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+      margin-right: 14px;
 
-        .section-header {
-            height: 60px;
-            margin-bottom: 30px;
-            padding-top: 30px;
+      .title-section {
+        font-size: 18px;
+        font-weight: 600;
+      }
 
-            .title-section {
-                font-size: 20px;
-                font-weight: 600;
-            }
+      .btn-section {
+        background-color: #fff !important;
+        transition: 0.3s ease;
 
-            .btn-section {
-                float: right;
-                display: block;
-                padding: 10px 15px;
-                border: none;
-                outline: none;
-                background: rgb(248, 239, 239);
-                color: black;
-                cursor: pointer;
-                text-transform: uppercase;
-
-                &:hover {
-                    color: #fff;
-                    background: rgb(151, 61, 61);
-                }
-            }
-
+        &:hover {
+          opacity: 0.8;
         }
-
-        .section-body {
-
-            // reset slick slider css
-
-            .section-customize {
-                .bg-image {
-                    width: 278px;
-                    height: 150px;
-                    background: url('../../../assets/specialties/181619-sieu-am-thai.jpg');
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                }
-            }
-            .specialty-child{
-                cursor: pointer;
-                .specialty-name{
-                    padding: 10px 0;
-                    &:hover{
-                        color: rgb(0, 119, 255);
-                    }
-
-
-                }
-            }
-
-
-
-        }
+      }
     }
 
+    .section-body {
+      // reset slick slider css
 
+      .section-customize {
+        width: 95% !important;
+        overflow: hidden;
 
-}
+        // .bg-image {
+        //   width: 100%;
+        //   max-width: 100%;
+        //   height: 150px;
+        //   background: url("../../../assets/specialties/181619-sieu-am-thai.jpg");
+        //   background-position: center center;
+        //   background-repeat: no-repeat;
+        //   background-size: cover;
+        //   background-color: #eee;
+        //   overflow: hidden;
+        //   transition: 0.3s ease;
 
-.slick-prev {
-    left: -10 !important;
-    z-index: 1000;
-    height: 48px !important;
-    width: 44px !important;
-    background: #fff !important;
-    border: 2px solid #d7d7d7 !important;
+        //   &:hover {
+        //     transition: 0.3s ease;
+        //     opacity: 0.8;
+        //   }
+        // }
+      }
+      .specialty-child {
+        width: 95% !important;
+        max-width: 95% !important;
+        overflow: hidden;
+        cursor: pointer;
 
+        & img {
+          width: 100%;
+          max-width: 100%;
+          height: 150px;
+          object-fit: cover;
+          transition: 0.5s;
+          overflow: hidden;
+          border-radius: 4px;
 
-    &:hover {
-        background: #c4c1c1 !important;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
 
+        .specialty-title {
+          margin: 8px 0;
+          font-size: 13px;
+          font-weight: 500;
+        }
+
+        .specialty-name {
+          font-size: 14px;
+          font-weight: 600;
+          transition: 0.3s ease;
+
+          &:hover {
+            color: #002147;
+            opacity: 0.8;
+            margin-left: 4px;
+          }
+        }
+      }
     }
+  }
 }
 
 .slick-next::before,
-.slick-prev::before {
-    font-family: 'FontAwesome' !important;
-    color: red !important;
-
+.slick-pre::after {
+  color: #333;
 }
 
-.slick-next {
-    position: relative;
-    right: -10 !important;
-    height: 48px !important;
-    width: 44px !important;
-    background: #fff !important;
-    border: 2px solid #d7d7d7 !important;
+.slick-next:before {
+  color: #333 !important;
+  font-size: 24px !important;
+  z-index: 100 !important;
+  position: absolute;
+  right: 12px !important;
+  transform: translateY(-50%) !important;
+}
 
-    &:hover {
-        background: #c4c1c1 !important;
+.slick-prev:before {
+  color: #333 !important;
+  font-size: 24px !important;
+  transform: translateY(-100%) !important;
+  //   z-index: 999 !important;
+  //   left: 12px !important;
+}
 
-    }
+// .slick-prev {
+//   left: -10 !important;
+//   z-index: 1000;
+//   height: 48px !important;
+//   width: 44px !important;
+//   background: #fff !important;
+//   border: 2px solid #d7d7d7 !important;
+
+//   &:hover {
+//     background: #c4c1c1 !important;
+//   }
+// }
+
+// .slick-next::before,
+// .slick-prev::before {
+//   font-family: "FontAwesome" !important;
+//   color: red !important;
+// }
+
+// .slick-next {
+//     position: relative;
+//     right: -10 !important;
+//     height: 48px !important;
+//     width: 44px !important;
+//     background: #fff !important;
+//     border: 2px solid #d7d7d7 !important;
+
+//     &:hover {
+//         background: #c4c1c1 !important;
+
+//     }
+// }
+.section-share .section-content .section-header {
+  margin-right: 14px !important;
+}
+
+.section-share .section-content .section-header .btn-section {
+  float: right;
+  display: block;
+  border-radius: 6px;
+  padding: 8px 12px !important;
+  border: none;
+  outline: none;
+  background: #fff !important;
+  color: #333;
+  cursor: pointer;
+  // text-transform: uppercase;
+
+  &:hover {
+    color: #333 !important;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  }
+}
+
+.section-share .section-body .section-customize {
+  width: 95% !important;
+}
+
+.section-share {
+  height: auto !important;
+  min-height: 360px !important;
 }

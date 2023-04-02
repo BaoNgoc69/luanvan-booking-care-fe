@@ -1,171 +1,161 @@
 .section-share {
-    &.section-specialty {
-        background-color: rgb(232, 234, 224);
+  &.section-specialty {
+    background-color: rgb(232, 234, 224);
+  }
+
+  &.section-doctor {
+    background-color: rgb(232, 234, 224);
+  }
+
+  &.section-about {
+    height: 450px !important;
+    // border-top: 1px solid orange;
+    // border-bottom: 1px solid orange;
+    // margin-top: 20px;
+  }
+
+  .slick-disabled {
+    display: none !important;
+  }
+
+  .section-body {
+    .section-customize {
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 12px;
+      gap: 16px !important;
+
+      // .bg-image {
+      //   border-radius: 8px;
+      //   width: 278px;
+      //   height: 150px;
+      //   background: url("../../assets/specialties/181619-sieu-am-thai.jpg");
+      //   background-position: center center;
+      //   background-repeat: no-repeat !important;
+      //   background-size: cover;
+      //   background-color: #eee;
+
+      //   &.section-specicalty {
+      //     //background-image: url('../../assets/specialties/181619-sieu-am-thai.jpg');
+      //   }
+
+      //   &.section-medical-facility {
+      //     //background-image: url('../../assets/medical-facility/112414-pk-dhyd1.jpg');
+      //   }
+
+      //   &.section-doctor {
+      //     // background-image: url('../../assets/doctor/103848anh-dai-dien-bs.jpg');
+      //     width: 120px;
+      //     height: 120px;
+      //     border-radius: 50%;
+      //     margin-left: 54px;
+      //   }
+
+      //   &.section-handbook {
+      //     background-image: url("../../assets/handbook/180844-phong-kham-tim-mach-bac-si-pham-xuan-hau.png");
+      //   }
+      // }
     }
-
-    &.section-doctor {
-        background-color: rgb(232, 234, 224);
-    }
-
-    &.section-about {
-        height: 450px !important;
-        border-top: 1px solid orange;
-        border-bottom: 1px solid orange;
-    }
-
-
-
-    .slick-disabled {
-        display: none !important;
-    }
-
-    .section-body {
-        .section-customize {
-            .bg-image {
-                width: 278px;
-                height: 150px;
-                background: url('../../assets/specialties/181619-sieu-am-thai.jpg');
-                background-position: center center;
-                background-repeat: no-repeat !important;
-                background-size: cover;
-                background-color: #eee;
-
-                &.section-specicalty {
-                    //background-image: url('../../assets/specialties/181619-sieu-am-thai.jpg');
-
-                }
-
-                &.section-medical-facility {
-                    //background-image: url('../../assets/medical-facility/112414-pk-dhyd1.jpg');
-
-                }
-
-                &.section-doctor {
-                    // background-image: url('../../assets/doctor/103848anh-dai-dien-bs.jpg');
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50%;
-                    margin-left: 54px;
-
-
-                }
-
-                &.section-handbook {
-                    background-image: url('../../assets/handbook/180844-phong-kham-tim-mach-bac-si-pham-xuan-hau.png');
-
-                }
-
-
-
-
-
-
-            }
-        }
-
-
-
-    }
-
+  }
 }
 
 .section-share {
-    height: 330px;
+  height: 330px;
 
-    .section-content {
-        margin: 0 70px;
-        display: flex;
-        flex-direction: column;
+  .section-content {
+    margin: 0 70px;
+    display: flex;
+    flex-direction: column;
 
-        .section-header {
-            height: 60px;
-            margin-bottom: 30px;
-            padding-top: 30px;
+    .section-header {
+      height: 60px;
+      margin-bottom: 30px;
+      padding-top: 30px;
 
-            .title-section {
-                font-size: 20px;
-                font-weight: 600;
-            }
+      .title-section {
+        font-size: 20px;
+        font-weight: 600;
+      }
 
-            .btn-section {
-                float: right;
-                display: block;
-                padding: 10px 15px;
-                border: none;
-                outline: none;
-                background: rgb(248, 239, 239);
-                color: black;
-                cursor: pointer;
-                text-transform: uppercase;
+      .btn-section {
+        float: right;
+        display: block;
+        padding: 10px 15px;
+        border: none;
+        outline: none;
+        background: rgb(248, 239, 239);
+        color: black;
+        cursor: pointer;
+        text-transform: uppercase;
 
-                &:hover {
-                    color: #fff;
-                    background: rgb(151, 61, 61);
-                }
-            }
-
+        &:hover {
+          color: #fff;
+          background: rgb(151, 61, 61);
         }
-
-
+      }
     }
-
-
-
+  }
 }
 
 .section-doctor {
-    // .outer-bg {
-    //     display: flex;
-    //     // justify-content: center;
-    //     margin-bottom: 10px;
-    // }
-
-    .section-customize {
-        padding: 5px;
-        cursor: pointer;
-
+  .outer-bg {
+    & img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      height: 200px;
     }
+  }
 
-    .customize-border {
-        border: 1px solid orange;
-        padding: 20px;
-    }
-}
+  .section-customize {
+    padding: 5px;
+    cursor: pointer;
+  }
 
-.home-footer {
-    text-align: center;
-    padding-top: 8px;
-
+  .customize-border {
+    // border: 1px solid orange;
+    // padding: 20px;
+  }
 }
 
 .section-about {
-    margin: 0 100px;
+  margin-top: 20px;
+  margin: 0 100px;
 
-    .section-about-header {
-        // padding: 20px 10px;
-        font-size: 22px;
-        font-weight: 600;
+  .section-about-header {
+    padding: 12px 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .section-about-content {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+
+    .content-left {
+      width: 60%;
     }
 
-    .section-about-content {
-        display: flex;
-        gap: 15px;
-        width: 100%;
+    .content-right {
+      width: 40%;
 
-        .content-left {
-            width: 60%;
-        }
-
-        .content-right {
-            width: 40%;
-
-            p {
-                font-size: 13px;
-                font-weight: normal;
-                text-align: justify;
-                padding-top: 15px;
-                font-style: italic;
-            }
-        }
+      p {
+        font-size: 13px;
+        font-weight: normal;
+        text-align: justify;
+        padding-top: 15px;
+        font-style: italic;
+      }
     }
+  }
+}
+
+.position {
+  font-size: 13px;
+  padding: 8px 0 0 0;
+}
+
+.slick-dots {
+  margin-top: 8px !important;
 }

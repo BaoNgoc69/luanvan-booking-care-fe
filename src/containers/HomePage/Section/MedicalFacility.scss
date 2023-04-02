@@ -1,9 +1,41 @@
-.clinic-name{
-    padding: 10px 0;
+.clinic-name-wrap {
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  height: 40px;
+}
+
+.clinic-name {
+  padding: 10px 0;
+  cursor: pointer;
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 40px;
+  display: inline-block;
+
+  &:hover {
+    color: #002147;
+    opacity: 0.8;
+    margin-left: 4px;
+  }
+}
+
+.section-medical-facility {
+  width: 100% !important;
+  margin: auto;
+  background-color: #fff;
+
+  & img {
+    width: 100%;
+    object-fit: contain;
+    height: 60%;
+    max-height: 140px;
+    min-height: 140px;
     cursor: pointer;
-    &:hover{
-        color: rgb(0, 119, 255) !important;
-    }
-
-
+  }
 }

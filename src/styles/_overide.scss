@@ -1,0 +1,19 @@
+.slick-dots li button:before {
+  font-size: 10px !important;
+  line-height: 0 !important;
+}
+
+.slick-dots li,
+.slick-dots li button {
+  position: relative !important;
+  margin-left: 0px;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.slick-dots {
+  position: relative !important;
+  bottom: 0 !important;
+  left: -10px;
+  margin-top: 16px;
+}
