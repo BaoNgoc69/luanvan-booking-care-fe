@@ -205,3 +205,16 @@
     }
   }
 }
+
+.booing-list-item {
+  margin-bottom: 16px;
+  font-size: 16px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-weight: 600;
+
+  &:hover {
+    margin-left: 8px;
+  }
+}
