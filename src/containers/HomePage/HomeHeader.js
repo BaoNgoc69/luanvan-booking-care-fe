@@ -9,6 +9,7 @@ import { Button, Drawer } from "antd";
 import { BREAK_POINT } from "../../enum";
 import { MenuOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import { globalState$ } from "../../rxjs/store";
 
 class HomeHeader extends Component {
   changeLanguage = (language) => {
@@ -22,6 +23,14 @@ class HomeHeader extends Component {
   };
 
   componentDidMount() {
+    globalState$.subscribe((val) => {
+      if (val) {
+        this.setState({
+          user: val.user,
+        });
+      }
+    });
+
     const trackingPageResize = () => {
       if (window.innerWidth < BREAK_POINT.TABLET) {
         console.log("__start responsive___");
@@ -49,6 +58,7 @@ class HomeHeader extends Component {
     this.state = {
       isTablet: false,
       openDrawer: false,
+      user: null,
     };
   }
 
@@ -123,8 +133,19 @@ class HomeHeader extends Component {
                   </div>
                 </div>
                 <div className="right-content">
-                  <div className="support">
-                    <Link to={"/login"}> Tài khoản</Link>
+                  <div
+                    className="support"
+                    style={{
+                      maxWidth: "150px",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }}
+                  >
+                    {this.state.user ? (
+                      <Link to={"/profile"}>{this.state.user?.email}</Link>
+                    ) : (
+                      <Link to={"/user/login"}> Tài khoản</Link>
+                    )}
                   </div>
                   <div
                     className={

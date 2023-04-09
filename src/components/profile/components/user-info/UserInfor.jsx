@@ -1,6 +1,7 @@
 import { Button, Col, Form, Input, Row, Spin } from "antd";
 import React, { useEffect, useState } from "react";
 import { getProfile } from "../../../../services/userService";
+import { globalState$ } from "../../../../rxjs/store";
 
 const UserInfor = () => {
   const [form] = Form.useForm();
@@ -12,12 +13,13 @@ const UserInfor = () => {
 
   useEffect(() => {
     (async () => {
+      const currentUser = globalState$.value?.user;
       setLoading({
         ...loading,
         getProfile: true,
       });
       try {
-        const res = await getProfile(id);
+        const res = await getProfile(currentUser?.id || null);
         setUser(res?.data?.user);
 
         form.setFieldsValue({ ...user });

@@ -10,6 +10,7 @@ export const path = {
 
   VERIFY_EMAIL_BOOKING: "/verify-booking/",
   PROFILE: "/profile",
+  USER_LOGIN: "/user/login",
 };
 
 export const LANGUAGES = {

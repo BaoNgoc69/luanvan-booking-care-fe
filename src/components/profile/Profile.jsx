@@ -1,10 +1,26 @@
 import React from "react";
 import HomeHeader from "../../containers/HomePage/HomeHeader";
 import UserInfor from "./components/user-info/UserInfor";
-import { Tabs } from "antd";
+import { Space, Tabs } from "antd";
 import "./profile.scss";
+import BookingHistory from "./components/booking-history/BookingHistory";
+import { BookOutlined, LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import { globalState$ } from "../../rxjs/store";
+import { useHistory } from "react-router";
 
 const Profile = () => {
+  const history = useHistory();
+
+  const hanleLogout = () => {
+    localStorage.removeItem("booking-user");
+    globalState$.next({
+      ...globalState$.value,
+      user: null,
+    });
+
+    history.push("/home");
+  };
+
   return (
     <>
       <HomeHeader></HomeHeader>
@@ -17,18 +33,45 @@ const Profile = () => {
           style={{ minHeight: "90vh" }}
           items={[
             {
-              label: <span className="tab-bg">Thông tin cá nhân</span>,
+              label: (
+                <>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <UserOutlined />
+                    <span className="tab-bg">Patient Inforamtion</span>
+                  </div>
+                </>
+              ),
               key: "1",
               children: <UserInfor></UserInfor>,
             },
             {
-              label: "Lịch sử khám bệnh",
+              label: (
+                <>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <BookOutlined />
+                    <span>Booking history</span>
+                  </div>
+                </>
+              ),
+
               key: "2",
               children: (
                 <>
-                  <div>lịch sử khám bệnh</div>
+                  <BookingHistory></BookingHistory>
                 </>
               ),
+            },
+            {
+              label: (
+                <>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <LogoutOutlined />
+                    <div onClick={hanleLogout}>Logout</div>
+                  </div>
+                </>
+              ),
+              key: "3",
+              children: <></>,
             },
           ]}
         />

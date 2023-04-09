@@ -21,6 +21,7 @@ import VerifyEmail from "./Patient/VerifyEmail";
 import DetailSpecialty from "./Patient/Specialty/DetailSpecialty";
 import DetailClinic from "./Patient/Clinic/DetailClinic";
 import Profile from "../components/profile/Profile";
+import UserLogin from "../features/user/login/UserLogin";
 class App extends Component {
   handlePersistorState = () => {
     const { persistor } = this.props;
@@ -53,7 +54,9 @@ class App extends Component {
                     path={path.LOGIN}
                     component={userIsNotAuthenticated(Login)}
                   />
+                  <Route path={path.USER_LOGIN} component={UserLogin} />
                   <Route path={path.PROFILE} component={Profile} />
+
                   <Route
                     path={path.SYSTEM}
                     component={userIsAuthenticated(System)}

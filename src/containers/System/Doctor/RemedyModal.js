@@ -23,12 +23,7 @@ class RemedyModal extends Component {
                 email: this.props.dataModal.email
             })
         }
-
-
-
     }
-
-
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.dataModal !== this.props.dataModal) {
@@ -36,17 +31,7 @@ class RemedyModal extends Component {
                 email: this.props.dataModal.email
             })
         }
-
     }
-
-
-
-
-
-
-
-
-
 
     handleOnchangeEmail = (event) => {
         this.setState({
@@ -61,9 +46,7 @@ class RemedyModal extends Component {
             let base64 = await CommonUtils.getBase64(file);
             this.setState({
                 imgBase64: base64
-
             })
-
         }
     }
 
