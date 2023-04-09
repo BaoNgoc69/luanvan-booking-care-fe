@@ -8,6 +8,7 @@ import "./Header.scss";
 import { LANGUAGES, USER_ROLE } from "../../utils";
 import { FormattedMessage } from "react-intl";
 import _ from "lodash";
+import { Button } from "antd";
 
 class Header extends Component {
   constructor(props) {
@@ -49,7 +50,6 @@ class Header extends Component {
         <div className="header-tabs-container">
           <Navigator menus={this.state.menuApp} />
         </div>
-
         <div className="languages">
           <span className="welcome">
             <FormattedMessage id="homeheader.welcome" />
@@ -72,6 +72,7 @@ class Header extends Component {
           >
             EN
           </span>
+
           {/* nút logout */}
           <div
             className="btn btn-logout"

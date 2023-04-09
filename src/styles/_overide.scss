@@ -17,3 +17,24 @@
   left: -10px;
   margin-top: 16px;
 }
+
+.login-title {
+  text-transform: uppercase !important;
+  font-weight: 600;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.login-container {
+  padding: 8px 16px 0 16px;
+  height: 400px;
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #333 !important;
+
+  &:hover {
+    color: #333 !important;
+  }
+}
