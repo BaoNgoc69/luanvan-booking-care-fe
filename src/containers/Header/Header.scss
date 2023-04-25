@@ -11,9 +11,11 @@
 
     .btn-logout {
         color: $common-text-color;
-        line-height: 40px;
-        height: 40px;
+        line-height: 0px;
+        height: 30px;
         padding: 0 10px;
+        background-color: #0071ba !important;
+        border: none !important;
 
         &:hover {
             background-color: darken($colormain, 5);
@@ -48,5 +50,9 @@
         .welcome {
             margin-right: 10px;
         }
+        .button.btn.btn-primary.px-2 {
+            background: aqua !important;
+        }
     }
+
 }

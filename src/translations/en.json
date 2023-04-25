@@ -26,13 +26,11 @@
             "manage-user": "Users",
             "manage-doctor": "Manage doctors",
             "manage-admin": "Manage admin",
-            "crud": "CRUD user",
-            "crud-redux": "CRUD Redux",
+            "crud-redux": "Add User ",
             "clinic": "Clinics",
             "manage-clinic": "Manage clinic",
             "specialty": "specialty",
-            "manage-specialty": "Manage specialties",
-            "manage-handbook": "Manage handbook"
+            "manage-specialty": "Manage specialties"
         },
         "doctor": {
             "manage-schedule": "Manage doctor's schedule",
@@ -69,8 +67,7 @@
         "detail-doctor": {
             "schedule": "Schedule",
             "no-schedule": "No-schedule",
-            "choose": "Choose",
-            "book-free": "and book (free)"
+            "choose": "Choose"
         },
         "extra-infor-doctor": {
             "text-address": "Address of examination",

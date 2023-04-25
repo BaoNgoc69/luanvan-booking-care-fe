@@ -2,10 +2,10 @@ export const adminMenu = [
     { //quản lý người dùng
         name: 'menu.admin.manage-user',
         menus: [
-            {
-                name: 'menu.admin.crud', link: '/system/user-manage',
+            // {
+            //     name: 'menu.admin.crud', link: '/system/user-manage',
 
-            },
+            // },
             {
                 name: 'menu.admin.crud-redux', link: '/system/user-redux',
 
@@ -49,17 +49,17 @@ export const adminMenu = [
 
         ]
     },
-    { //quản lý cẩm nan
-        name: 'menu.admin.handbook',
-        menus: [
-            {
-                name: 'menu.admin.manage-handbook', link: '/system/manage-handbook',
+    // { //quản lý cẩm nan
+    //     name: 'menu.admin.handbook',
+    //     menus: [
+    //         {
+    //             name: 'menu.admin.manage-handbook', link: '/system/manage-handbook',
 
-            },
+    //         },
 
 
-        ]
-    },
+    //     ]
+    // },
 ];
 
 export const doctorMenu = [
